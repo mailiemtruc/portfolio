@@ -56,10 +56,14 @@ let startBackgroundEffects = null;
 // ======================================================
 // 2. PRELOADER SYSTEM (Đã bọc an toàn trong hàm)
 // ======================================================
-// Chờ HTML tải xong 100% mới chạy code tìm thẻ -> Tránh lỗi null
-document.addEventListener("DOMContentLoaded", () => {
+// KIỂM TRA TRẠNG THÁI TẢI TRANG (FIX CHO MODULE)
+if (document.readyState === 'loading') {
+    // Nếu trang đang tải, thì chờ
+    document.addEventListener("DOMContentLoaded", initPreloader);
+} else {
+    // Nếu trang đã tải xong (do module load chậm), CHẠY LUÔN
     initPreloader();
-});
+}
 
 function initPreloader() {
     // 1. Khai báo biến BÊN TRONG hàm (An toàn nhất)
