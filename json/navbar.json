@@ -1,0 +1,34 @@
+{
+  "logo": {
+    "src": "img/logo.png",
+    "alt": "Mai Liêm Trực Logo",
+    "link": "#home"
+  },
+  "menu": [
+    {
+      "link": "#about",
+      "icon": "ri-user-smile-line",
+      "label": { "vi": "Về tôi", "en": "About" }
+    },
+    {
+      "link": "#experience",
+      "icon": "ri-briefcase-line",
+      "label": { "vi": "Kinh nghiệm", "en": "Experience" }
+    },
+    {
+      "link": "#projects",
+      "icon": "ri-code-s-slash-line",
+      "label": { "vi": "Dự án", "en": "Projects" }
+    },
+    {
+      "link": "#skills",
+      "icon": "ri-cpu-line",
+      "label": { "vi": "Kỹ năng", "en": "Skills" }
+    },
+    {
+      "link": "#contact",
+      "icon": "ri-mail-send-line",
+      "label": { "vi": "Liên hệ", "en": "Contact" }
+    }
+  ]
+}

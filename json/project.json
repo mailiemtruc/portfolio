@@ -1,0 +1,241 @@
+{
+  "info": {
+    "title": { "vi": "Dự án tiêu biểu", "en": "Featured Projects" }
+  },
+  "list": [
+    {
+      "id": 1,
+      "title": {
+        "vi": "THÀNH PHỐ: BUNBUN CITY",
+        "en": "CITY: BUNBUN CITY"
+      },
+      "description": {
+        "vi": [
+          "Máy chủ mang phong cách nhập vai và sử dụng vũ khí cận chiến độc đáo.",
+          "Thể loại: Nhập vai - Thời trang - Xã hội - Kinh doanh"
+        ],
+        "en": [
+          "The server has a role-playing style and uses unique melee weapons.",
+          "Genre: Roleplay - Fashion - Social - Business"
+        ]
+      },
+      "image": "img/server/bunbuncity.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#lua", "color": "#000080" },
+        { "name": "#heidiSQL", "color": "#2E8B57" },
+        { "name": "#xampp", "color": "#FB7A24" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": {
+        "vi": "THÀNH PHỐ: JURA CITY",
+        "en": "CITY: JURA CITY"
+      },
+      "description": {
+        "vi": [
+          "Máy chủ mang phong cách nhập vai và sử dụng vũ khí cận chiến độc đáo.",
+          "Thể loại: Nhập vai - Thời trang - Xã hội - Kinh doanh"
+        ],
+        "en": [
+          "The server has a role-playing style and uses unique melee weapons.",
+          "Genre: Roleplay - Fashion - Social - Business"
+        ]
+      },
+      "image": "img/server/juracity.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#lua", "color": "#000080" },
+        { "name": "#heidiSQL", "color": "#2E8B57" },
+        { "name": "#xampp", "color": "#FB7A24" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": {
+        "vi": "THÀNH PHỐ: RACCOON TOWN",
+        "en": "CITY: RACCOON TOWN"
+      },
+      "description": {
+        "vi": [
+          "Máy chủ mang phong cách nhập vai và sử dụng vũ khí cận chiến độc đáo.",
+          "Thể loại: Nhập vai - Thời trang - Xã hội - Kinh doanh"
+        ],
+        "en": [
+          "The server has a role-playing style and uses unique melee weapons.",
+          "Genre: Roleplay - Fashion - Social - Business"
+        ]
+      },
+      "image": "img/server/raccoontown.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#lua", "color": "#000080" },
+        { "name": "#heidiSQL", "color": "#2E8B57" },
+        { "name": "#xampp", "color": "#FB7A24" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": {
+        "vi": "THÀNH PHỐ: MEOW TOWN",
+        "en": "CITY: MEOW TOWN"
+      },
+      "description": {
+        "vi": [
+          "Máy chủ mang phong cách nhập vai và sử dụng vũ khí cận chiến độc đáo.",
+          "Thể loại: Nhập vai - Thời trang - Xã hội - Kinh doanh"
+        ],
+        "en": [
+          "The server has a role-playing style and uses unique melee weapons.",
+          "Genre: Roleplay - Fashion - Social - Business"
+        ]
+      },
+      "image": "img/server/meowtown.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#lua", "color": "#000080" },
+        { "name": "#heidiSQL", "color": "#2E8B57" },
+        { "name": "#xampp", "color": "#FB7A24" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": {
+        "vi": "THÀNH PHỐ: CLOUD CITY",
+        "en": "CITY: CLOUD CITY"
+      },
+      "description": {
+        "vi": [
+          "Máy chủ mang phong cách nhập vai và sử dụng vũ khí cận chiến độc đáo.",
+          "Thể loại: Nhập vai - Thời trang - Xã hội - Kinh doanh"
+        ],
+        "en": [
+          "The server has a role-playing style and uses unique melee weapons.",
+          "Genre: Roleplay - Fashion - Social - Business"
+        ]
+      },
+      "image": "img/server/cloudcity.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#lua", "color": "#000080" },
+        { "name": "#heidiSQL", "color": "#2E8B57" },
+        { "name": "#xampp", "color": "#FB7A24" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": {
+        "vi": "THÀNH PHỐ: PANDA CITY",
+        "en": "CITY: PANDA CITY"
+      },
+      "description": {
+        "vi": [
+          "Máy chủ mang phong cách nhập vai và sử dụng vũ khí cận chiến độc đáo.",
+          "Thể loại: Nhập vai - Thời trang - Xã hội - Kinh doanh"
+        ],
+        "en": [
+          "The server has a role-playing style and uses unique melee weapons.",
+          "Genre: Roleplay - Fashion - Social - Business"
+        ]
+      },
+      "image": "img/server/pandacity.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#lua", "color": "#000080" },
+        { "name": "#heidiSQL", "color": "#2E8B57" },
+        { "name": "#xampp", "color": "#FB7A24" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": {
+        "vi": "THÀNH PHỐ: PIUPOW TOWN",
+        "en": "CITY: PIUPOW TOWN"
+      },
+      "description": {
+        "vi": [
+          "Máy chủ mang phong cách nhập vai và sử dụng vũ khí cận chiến độc đáo.",
+          "Thể loại: Nhập vai - Thời trang - Xã hội - Kinh doanh"
+        ],
+        "en": [
+          "The server has a role-playing style and uses unique melee weapons.",
+          "Genre: Roleplay - Fashion - Social - Business"
+        ]
+      },
+      "image": "img/server/piupowtown.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#lua", "color": "#000080" },
+        { "name": "#heidiSQL", "color": "#2E8B57" },
+        { "name": "#xampp", "color": "#FB7A24" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": {
+        "vi": "THÀNH PHỐ: CHICKEN TOWN",
+        "en": "CITY: CHICKEN TOWN"
+      },
+      "description": {
+        "vi": [
+          "Máy chủ mang phong cách nhập vai và sử dụng vũ khí cận chiến độc đáo.",
+          "Thể loại: Nhập vai - Thời trang - Xã hội - Kinh doanh"
+        ],
+        "en": [
+          "The server has a role-playing style and uses unique melee weapons.",
+          "Genre: Roleplay - Fashion - Social - Business"
+        ]
+      },
+      "image": "img/server/chikentown.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#lua", "color": "#000080" },
+        { "name": "#heidiSQL", "color": "#2E8B57" },
+        { "name": "#xampp", "color": "#FB7A24" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": {
+        "vi": "THÀNH PHỐ: HATE CITY RP",
+        "en": "CITY: HATE CITY RP"
+      },
+      "description": {
+        "vi": [
+          "Máy chủ mang phong cách nhập vai và sử dụng vũ khí cận chiến độc đáo.",
+          "Thể loại: Nhập vai - Thời trang - Xã hội - Kinh doanh"
+        ],
+        "en": [
+          "The server has a role-playing style and uses unique melee weapons.",
+          "Genre: Roleplay - Fashion - Social - Business"
+        ]
+      },
+      "image": "img/server/hatecityrp.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#lua", "color": "#000080" },
+        { "name": "#heidiSQL", "color": "#2E8B57" },
+        { "name": "#xampp", "color": "#FB7A24" }
+      ]
+    }
+  ]
+}

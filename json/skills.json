@@ -1,0 +1,71 @@
+{
+  "info": {
+    "title": { "vi": "Kỹ năng chuyên môn", "en": "Skills" }
+  },
+  "list": [
+    {
+      "category": "Mobile App",
+      "items": [
+        { "name": "Flutter", "type": "image", "src": "img/flutter-icon.png", "color": "#42A5F5" },
+        { "name": "Kotlin", "type": "image", "src": "img/kotlin-programming-language-icon.png", "color": "#7F52FF" },
+        { "name": "Swift", "type": "image", "src": "img/swift-programming-language-icon.png", "color": "#F05138" }
+      ]
+    },
+    {
+      "category": "Core Languages",
+      "items": [
+        { "name": "Java", "type": "image", "src": "img/java-programming-language-icon.png", "color": "#E76F00" },
+        { "name": "Python", "type": "image", "src": "img/python-programming-language-icon.png", "color": "#FFD43B" },
+        { "name": "C", "type": "image", "src": "img/c-program-icon.png", "color": "#A8B9CC" },
+        { "name": "C++", "type": "image", "src": "img/c-plus-plus-programming-language-icon.png", "color": "#00599C" },
+        { "name": "C#", "type": "image", "src": "img/c-sharp-programming-language-icon.png", "color": "#9B4F96" },
+        { "name": "TypeScript", "type": "image", "src": "img/typescript-programming-language-icon.png", "color": "#3178C6" },
+        { "name": "Lua", "type": "image", "src": "img/lua.png", "color": "#000080" }
+      ]
+    },
+    {
+      "category": "Web & Backend Ecosystem",
+      "items": [
+        { "name": "React", "type": "image", "src": "img/react-js-icon.png", "color": "#61DAFB" },
+        { "name": "Next.js", "type": "image", "src": "img/nextjs-icon.png", "color": "#ffffff" },
+        { "name": "Node.js", "type": "image", "src": "img/node-js-icon.png", "color": "#339933" },
+        { "name": "PHP", "type": "image", "src": "img/php-programming-language-icon.png", "color": "#777BB4" },
+        { "name": "Spring Boot", "type": "image", "src": "img/spring-boot-icon.png", "color": "#6DB33F" },
+        { "name": "PostgreSQL", "type": "image", "src": "img/postgresql-icon.png", "color": "#336791" },
+        { "name": "MySQL", "type": "image", "src": "img/mysql-icon.png", "color": "#4479A1" },
+        { "name": "SQL Server", "type": "image", "src": "img/sql-server-icon.png", "color": "#CC2927" },
+        { "name": "HeidiSQL", "type": "image", "src": "img/HeidiSQL.png", "color": "#2E8B57" },
+        { "name": "Tailwind", "type": "image", "src": "img/tailwind-css-icon.png", "color": "#06B6D4" },
+        { "name": "Three.js", "type": "image", "src": "img/three-js-icon.png", "color": "#ffffff", "imgClass": "white-icon" },
+        { "name": "HTML", "type": "image", "src": "img/html-icon.png", "color": "#ff5e00" },
+        { "name": "CSS", "type": "image", "src": "img/css-icon.png", "color": "#0077ff" },
+        { "name": "JS", "type": "image", "src": "img/javascript-programming-language-icon.png", "color": "#fbff00" }
+      ]
+    },
+    {
+      "category": "DevOps & Creative Tools",
+      "items": [
+        { "name": "Docker", "type": "image", "src": "img/docker-icon.png", "color": "#2496ED" },
+        { "name": "GitHub", "type": "image", "src": "img/github-icon.png", "color": "#ffffff", "imgClass": "white-icon" },
+        { "name": "Postman", "type": "image", "src": "img/postman-icon.png", "color": "#FF6C37" },
+        { "name": "XAMPP", "type": "image", "src": "img/xampp-icon.png", "color": "#FB7A24" },
+        { "name": "Figma", "type": "image", "src": "img/figma-icon.png", "color": "#F24E1E" },
+        { "name": "Blender", "type": "image", "src": "img/blender-icon.png", "color": "#E87D0D" },
+        { "name": "3ds Max", "type": "image", "src": "img/autodesk-3ds-max-icon.png", "color": "#58A2B6" },
+        { "name": "Photoshop", "type": "image", "src": "img/adobe-photoshop-icon.png", "color": "#31A8FF" },
+        { "name": "Illustrator", "type": "image", "src": "img/adobe-illustrator-icon.png", "color": "#FF9A00" },
+        { "name": "Game Scripting", "type": "icon", "iconClass": "ri-gamepad-line", "color": "#FF0000" },
+        { "name": "FiveM / GTA V", "type": "image", "src": "img/fivem.png", "color": "#FFA500" }
+      ]
+    },
+    {
+      "category": "Business & Operations",
+      "items": [
+        { "name": "E-commerce", "type": "icon", "iconClass": "ri-line-chart-line", "color": "#27c93f" },
+        { "name": "Customer Support", "type": "icon", "iconClass": "ri-customer-service-2-line", "color": "#FFD43B" },
+        { "name": "Product Mindset", "type": "icon", "iconClass": "ri-lightbulb-flash-line", "color": "#F24E1E" },
+        { "name": "Teamwork & Communication", "type": "icon", "iconClass": "ri-team-line", "color": "#3498db" }
+      ]
+    }
+  ]
+}

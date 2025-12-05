@@ -1,0 +1,46 @@
+{
+  "intro": {
+    "subTitle": {
+      "vi": "GIỚI THIỆU",
+      "en": "INTRODUCTION"
+    },
+    "heading": {
+      "vi": "Tổng quan",
+      "en": "Overview"
+    },
+    "description": {
+      "vi": "Mình là một <strong>Full-stack Developer</strong> với tư duy <strong>Product Mindset</strong> thực chiến. Kết hợp nền tảng kỹ thuật vững chắc (Mobile, Web, Automation) với kinh nghiệm vận hành kinh doanh (E-commerce & Game Service). Không chỉ viết code, mình tập trung <strong>phát triển</strong> các giải pháp tối ưu trải nghiệm người dùng và hiệu quả kinh doanh.",
+      "en": "I am a <strong>Full-stack Developer</strong> with a battle-tested <strong>Product Mindset</strong>. Combining a solid technical foundation (Mobile, Web, Automation) with business operation experience (E-commerce & Game Service). I don't just write code; I focus on <strong>developing</strong> solutions that optimize user experience and business efficiency."
+    }
+  },
+  "roles": [
+    {
+      "image": "img/mobile.png",
+      "title": {
+        "vi": "Mobile App <br> Developer",
+        "en": "Mobile App <br> Developer"
+      }
+    },
+    {
+      "image": "img/backend.png",
+      "title": {
+        "vi": "Full Stack <br> Developer",
+        "en": "Full Stack <br> Developer"
+      }
+    },
+    {
+      "image": "img/creator.png",
+      "title": {
+        "vi": "Bot & Tool <br> Automation",
+        "en": "Bot & Tool <br> Automation"
+      }
+    },
+    {
+      "image": "img/web.png",
+      "title": {
+        "vi": "UI/UX <br> Designer",
+        "en": "UI/UX <br> Designer"
+      }
+    }
+  ]
+}

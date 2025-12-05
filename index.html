@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <!-- BASE -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mai Liêm Trực | Portfolio</title>
+  <meta name="description" content="Mai Liêm Trực – Full-stack developer chuyên xây dựng hệ thống đa nền tảng (Web, Mobile) với trải nghiệm người dùng tối ưu, bảo mật cao và hiệu năng vượt trội. Portfolio & dự án thực tế." />
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+
+  <!-- CANONICAL (RẤT QUAN TRỌNG CHO SEO) -->
+  <link rel="canonical" href="https://mailiemtruc.site/" />
+
+  <!-- OPEN GRAPH (Facebook, Zalo, Messenger) -->
+  <meta property="og:title" content="Mai Liêm Trực | Full-stack Developer" />
+  <meta property="og:description" content="Full-stack developer chuyên phát triển Web & Mobile, tối ưu hóa trải nghiệm, bảo mật và hiệu năng. Khám phá portfolio và các dự án nổi bật." />
+  <meta property="og:image" content="https://mailiemtruc.site/img/mlt.png" />
+  <meta property="og:url" content="https://mailiemtruc.site/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mai Liêm Trực Portfolio" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mai Liêm Trực | Full-stack Developer" />
+  <meta name="twitter:description" content="Portfolio cá nhân - Full-stack developer (Web & Mobile)" />
+  <meta name="twitter:image" content="https://mailiemtruc.site/img/logo.png" />
+
+  <!-- KEYWORDS (VẪN CÓ GIÁ TRỊ NHẸ CHO SEO) -->
+  <meta name="keywords" content="Mai Liêm Trực, Full-stack Developer, Web Developer, Mobile Developer, Flutter, Next.js, Spring Boot, Portfolio lập trình viên, mailiemtruc.site" />
+
+  <!-- AUTHOR -->
+  <meta name="author" content="Mai Liêm Trực" />
+
+  <!-- ROBOTS -->
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;900&family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- ICONS -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+  <body>
+    <div class="particle-container" id="particle-container"></div>
+    <div class="preloader">
+      <video id="intro-video" muted playsinline preload="auto">
+          <source src="img/intro/mlt.mp4" type="video/mp4">
+      </video>
+
+      <div class="loader-content">
+          <div class="counter">0%</div>
+          <div class="loader-bar"><div class="bar-fill"></div></div> 
+      </div>
+    </div>
+
+    <canvas id="bg-canvas"></canvas>
+    <div class="cursor-glow"></div>
+
+    <nav class="glass-nav reveal-content">
+      <div class="nav-container">
+        <a href="#home" class="logo logo-img" id="nav-logo-container">
+            </a>
+
+        <ul class="nav-links" id="nav-links-container">
+            </ul>
+        
+        <div class="nav-right" style="display: flex; align-items: center; gap: 15px;">
+            <div class="lang-switcher" style="margin: 0;"> 
+                <button id="lang-toggle" data-lang="vi">EN</button>
+            </div>
+            <button class="menu-btn" id="menuBtn"><i class="ri-menu-4-line"></i></button>
+        </div>
+
+      </div>
+    </nav>
+
+    <main class="main reveal-content">
+      <section id="home" class="hero-section">
+        <div id="hero-container" style="display: contents;"></div>
+      </section>
+
+      <section id="about" class="section">
+        <div id="about-container" class="overview-container"></div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="section-title fade-in-up">
+            <h2 id="exp-heading"></h2> </div>
+        <div class="timeline" id="experience-container"></div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-title fade-in-up">
+            <h2 id="proj-heading"></h2>
+        </div>
+        <div class="projects-grid" id="projects-container"></div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-title fade-in-up">
+            <h2 id="skill-heading"></h2>
+        </div>
+        <div class="skills-wrapper" id="skills-container"></div>
+      </section>
+      
+      <section id="contact" class="section">
+        <div id="contact-container"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Code with by <strong>Mai Liêm Trực</strong>.</p>
+    </footer>
+    
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+      (function(){
+        emailjs.init("OSfmaXfc6ERnwj6E7");
+      })();
+    </script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

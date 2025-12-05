@@ -1,0 +1,35 @@
+{
+  "info": {
+    "badge": {
+      "vi": "Sẵn sàng nhận dự án",
+      "en": "Available for work"
+    },
+    "name": "Mai Liêm Trực",
+    "title": {
+      "vi": "Lập trình viên phát triển toàn diện",
+      "en": "Full-stack Developer"
+    },
+    "tagline": {
+      "vi": "Phát triển hệ thống đa nền tảng (Web, Mobile) với tư duy full-stack, tối ưu trải nghiệm, bảo mật và hiệu năng.",
+      "en": "Developing cross-platform systems (Web, Mobile) with a full-stack mindset, optimizing user experience, security, and performance."
+    },
+    "buttons": {
+      "projects": { "vi": "Xem dự án", "en": "View Projects" },
+      "contact": { "vi": "Liên hệ với tôi", "en": "Contact Me" }
+    },
+    "social": {
+      "github": "https://github.com/mailiemtruc",
+      "facebook": "https://www.facebook.com/m.liemtruc"
+    },
+    "avatar": "img/avata.png"
+  },
+  "codeSnippet": {
+    "filename": "developer.js",
+    "name": "Mai Liêm Trực",
+    "role": "Full-stack Developer",
+    "focus": ["Web", "Mobile"],
+    "priorities": ["UX", "Security", "Performance"],
+    "stack": ["Flutter", "Next.js", "Python", "PostgreSQL"],
+    "mission": "Build fast & secure systems."
+  }
+}
