@@ -24,21 +24,23 @@ requestAnimationFrame(raf);
 
 // === [MỚI] KIỂM TRA THIẾT BỊ ===
 function isMobileOrTablet() {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  // Android, iOS, Windows Phone
-  if (/android|ipad|iphone|ipod|windows phone/i.test(userAgent)) {
-    return true;
-  }
-  // Các thiết bị Android/Tablet khác (có thể loại trừ desktop mode)
-  if (/Mobi|Tablet|Mobile|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk|PSP/i.test(userAgent)) {
-    return true;
-  }
-  // Dùng màn hình cảm ứng như một tiêu chí phụ (ít chính xác hơn)
-  if (window.matchMedia("(pointer: coarse)").matches) {
-    return true;
-  }
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+  // iPhone / iPad / iPod
+  if (/iPhone|iPad|iPod/i.test(ua)) return true;
+
+  // Android
+  if (/android/i.test(ua)) return true;
+
+  // Generic mobile/tablet keywords
+  if (/Mobi|Tablet|Mobile|IEMobile|BlackBerry|Kindle|Silk|Opera Mini/i.test(ua)) return true;
+
+  // Touchscreen fallback (Safari hay lỗi userAgent)
+  if (window.matchMedia("(pointer: coarse)").matches) return true;
+
   return false;
 }
+
 
 // ======================================================
 // BIẾN TOÀN CỤC ĐỂ QUẢN LÝ ANIMATION (QUAN TRỌNG)
