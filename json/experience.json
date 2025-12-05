@@ -5,74 +5,94 @@
   "list": [
     {
       "id": 1,
-      "period": "2024 - Present",
+      "period": "2020 - 2022",
       "role": {
-        "vi": "Tool Developer",
-        "en": "Tool Developer"
+        "vi": "CHANNA LEE QUY NHƠN",
+        "en": "CHANNA LEE QUY NHƠN"
       },
-      "company": "Tunzankies",
+      "company": "Open an aquarium shop",
       "icon": "ri-tools-fill",
       "color": "#FFD43B",
       "description": {
         "vi": [
-          "Phát triển và bảo trì Website WordPress cho A.V.M Auto (Ahmedabad, India).",
-          "Phân tích phản hồi khách hàng và sửa lỗi (Bug fixing).",
-          "Tối ưu hóa công cụ tìm kiếm (SEO) để cải thiện hiệu suất tìm kiếm.",
-          "Bảo trì hosting và thiết kế hệ thống."
+          "Hợp tác với các trại lửa tại Indonesia, Malaysia và các ấn phẩm để nhập khẩu cá cảnh về bán.",
+          "Hợp tác với bạn bè tại TP.HCM, Hà Nội, Đà Nẵng để xây dựng chuỗi cửa hàng cá cảnh CHANNA LEE."
         ],
         "en": [
-          "Developed and maintained WordPress website for A.V.M Auto (Ahmedabad, India).",
-          "Analyzed customer feedback and performed bug fixing.",
-          "Optimized SEO to improve search visibility and performance.",
-          "Maintained hosting infrastructure and system architecture."
+          "Cooperate with fire camps in Indonesia, Malaysia and publications to import fish for sale.",
+          "Collaborate with friends in Ho Chi Minh, Hanoi, Da Nang to make a chain of aquarium stores CHANNA LEE."
         ]
       }
     },
     {
       "id": 2,
-      "period": "2023 - 2024",
+      "period": "2023 - Present",
       "role": {
-        "vi": "Next.JS Developer",
-        "en": "Next.JS Developer"
+        "vi": "Học tại Trường Đại học Giao thông Vận tải Thành phố Hồ Chí Minh",
+        "en": "Studying at Ho Chi Minh City University of Transport"
       },
-      "company": "Freelance / Portfolio",
+      "company": "Information technology students",
       "icon": "ri-code-s-slash-line",
       "color": "#61DAFB",
       "description": {
         "vi": [
-          "Tự học và thành thạo React.js & Next.js thông qua nghiên cứu độc lập.",
-          "Thiết kế và phát triển Portfolio cá nhân với giao diện trực quan, thân thiện.",
-          "Làm việc chặt chẽ với các bên liên quan để thu thập phản hồi và cải tiến tính tương tác."
+          "Chuyên ngành: Kỹ sư Phần mềm – Định hướng Phát triển Web và Ứng dụng Di động.",
+          "Có tinh thần tự học, chủ động nhận các dự án nhỏ để tích lũy kinh nghiệm thực tế.",
+          "Nâng cao tư duy UI/UX thông qua quá trình tự học và thực hành liên tục.",
+          "Chủ động học thêm các công cụ hỗ trợ như Photoshop, Illustrator, Blender,… để phục vụ cho thiết kế và phát triển sản phẩm."
+          
         ],
         "en": [
-          "Self-studied and mastered React.js & Next.js through independent research.",
-          "Designed and developed a personal Portfolio with an intuitive and user-friendly UI.",
-          "Worked closely with stakeholders to collect feedback and improve interactivity."
+          "Major: Software Engineering – Focused on Web and Mobile Application Development.",
+          "Self-motivated learner, actively taking on small projects to gain real-world experience.",
+          "Continuously improving UI/UX thinking through self-study and hands-on practice.",
+          "Proactively learning supporting tools such as Photoshop, Illustrator, Blender, and more to enhance design and product development skills."
         ]
       }
     },
     {
       "id": 3,
-      "period": "08/2023 - 12/2023",
+      "period": "08/2023 - Present",
       "role": {
-        "vi": "UI/UX Designer",
-        "en": "UI/UX Designer"
+        "vi": "DS TEAM",
+        "en": "DS TEAM"
       },
-      "company": "Lumisec Company",
+      "company": "Fivem programmer",
       "icon": "ri-pen-nib-fill",
       "color": "#F24E1E",
       "description": {
         "vi": [
-          "Thành thạo WordPress và tư duy thiết kế UI/UX thông qua tự học.",
-          "Hợp tác thiết kế: Làm việc nhóm để thu thập feedback và cải thiện sản phẩm.",
-          "Xây dựng thành công Website Portfolio trực quan trên nền tảng WordPress.",
-          "Góp phần tăng +54.25% doanh số nhờ cải thiện giao diện web."
+          "Chuyên thiết kế giao diện người dùng (UI) cho game.",
+          "Phát triển các tính năng mới, bao gồm nghề nghiệp, hệ thống và hoạt động trong game.",
+          "Khắc phục và sửa lỗi nhằm đảm bảo hệ thống hoạt động ổn định."
         ],
         "en": [
-          "Mastered WordPress and UI/UX design mindset through self-learning.",
-          "Collaborated in design teams to collect feedback and refine the product.",
-          "Successfully built a visual Portfolio website on the WordPress platform.",
-          "Contributed to a +54.25% increase in revenue by improving the web interface."
+          "Specialized in designing user interfaces (UI) for games.",
+          "Developed new features, including jobs, systems, and in-game activities",
+          "Performed bug fixing to ensure system stability and smooth operation."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "period": "08/2023 - Present",
+      "role": {
+        "vi": "OW STORE",
+        "en": "OW STORE"
+      },
+      "company": "Open a technology store",
+      "icon": "ri-brush-fill",
+      "color": "#9B5DE5",
+      "description": {
+        "vi": [
+          "Chuyên thiết kế các mô hình 3D (dây chuyền, đồng hồ, nhẫn,…) phục vụ cho game.",
+          "Thiết kế logo, banner, poster và các ấn phẩm đồ họa.",
+          "Phát triển bot tự động và các công cụ hỗ trợ vận hành."
+        ],
+        "en": [
+          "Specialized in creating 3D models (necklaces, watches, rings, etc.) for in-game assets.",
+          "Experienced in designing logos, banners, posters, and various graphic materials.",
+          "Developed automation bots and operational support tools."
         ]
       }
     }

@@ -6,6 +6,138 @@
     {
       "id": 1,
       "title": {
+        "vi": "Sàn Giao Dịch Xe Điện & Pin Đã Qua Sử Dụng",
+        "en": "Second-hand EV & Battery Trading Platform"
+      },
+      "description": {
+        "vi": [
+          "Sàn thương mại điện tử của bạn là nền tảng chuyên biệt, toàn diện dành riêng cho thị trường mua bán, trao đổi các dòng Xe Điện (EV) và Pin đã qua sử dụng.",
+          "Nền tảng được xây dựng dựa trên kiến trúc hỗ trợ ba đối tượng người dùng chính: Thành viên (Member), Nhân viên (STAFF), và Quản trị (Admin), đảm bảo một quy trình vận hành khép kín và hiệu quả."
+        ],
+        "en": [
+          "Your e-commerce platform is a dedicated, comprehensive platform dedicated to the market of buying, selling and exchanging used Electric Vehicles (EVs) and Batteries.",
+          "The platform is built on an architecture that supports three main user groups: Members, Staff, and Admins, ensuring a closed and efficient operating process."
+        ]
+      },
+      "image": "img/project/logo.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#java", "color": "#007396" },
+        { "name": "#html", "color": "#E34F26" },
+        { "name": "#js",  "color": "#F7DF1E" },
+        { "name": "#css", "color": "#1572B6" },
+        { "name": "#mysql", "color": "#1572B6" },
+        { "name": "#docker", "color": "#1572B6" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": {
+        "vi": "WEB BÁN HÀNG LUMISKIN",
+        "en": "LUMISKIN SALES WEBSITE"
+      },
+      "description": {
+        "vi": [
+          "Một trang web bán sản phẩm, giải pháp thương mại điện tử B2B và B2C tối ưu, được thiết kế đặc biệt để trao quyền cho các cửa hàng bán lẻ, từ quy mô nhỏ đến chuỗi lớn. Nền tảng của chúng tôi cung cấp đầy đủ các tính năng then chốt để bạn quản lý và phát triển việc kinh doanh trực tuyến một cách hiệu quả."
+        ],
+        "en": [
+          "A product selling website, the ultimate B2B and B2C e-commerce solution, specially designed to empower retail stores, from small scale to large chain. Our platform provides a full range of key features for you to manage and grow your online business effectively."
+        ]
+      },
+      "image": "img/project/logo2.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#java", "color": "#007396" },
+        { "name": "#html", "color": "#E34F26" },
+        { "name": "#js",  "color": "#F7DF1E" },
+        { "name": "#css", "color": "#1572B6" },
+        { "name": "#mysql", "color": "#1572B6" },
+        { "name": "#docker", "color": "#1572B6" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": {
+        "vi": "CỬA HÀNG OW",
+        "en": "OW STORE"
+      },
+      "description": {
+        "vi": [
+          "OW STORR là địa chỉ tin cậy cung cấp các công cụ (tool) hỗ trợ mạnh mẽ, đặc biệt là các GTAV tools chất lượng cao, giúp nâng tầm trải nghiệm của bạn.",
+          "Không chỉ dừng lại ở việc cung cấp các công cụ sẵn có, chúng tôi còn chuyên nhận viết các bot tự động theo yêu cầu riêng biệt. Dù bạn cần bot cho mục đích kinh doanh, giải trí, hay tự động hóa các tác vụ phức tạp, OW STORR cam kết mang đến những giải pháp tối ưu và hiệu quả nhất."
+        ],
+        "en": [
+          "OW STORR is a trusted address that provides powerful support tools, especially high-quality GTAV tools, to help enhance your experience.",
+          "We don't just stop at providing ready-made tools, we also specialize in writing automated bots according to specific requirements. Whether you need bots for business purposes, entertainment, or to automate complex tasks, OW STORR is committed to providing the most optimal and effective solutions."
+        ]
+      },
+      "image": "img/project/logo3.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#python", "color": "#FF0000" },
+        { "name": "#js", "color": "#FF0000" },
+        { "name": "#lua", "color": "#FF0000" },
+        { "name": "#heidiSQL", "color": "#2E8B57" },
+        { "name": "#xampp", "color": "#FB7A24" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": {
+        "vi": "OfficeSync: Hệ Điều Hành Số Cho Doanh Nghiệp",
+        "en": "OfficeSync: Digital Operating System for Business"
+      },
+      "description": {
+        "vi": [
+          "Đây là một Super App Doanh nghiệp (SaaS) đa sở hữu, được thiết kế trên kiến trúc Microservices, nhằm mục tiêu tối ưu hóa Vận hành trôi chảy, Kiểm soát minh bạch, và Tiết kiệm thời gian cho mọi loại hình doanh nghiệp.",
+          "Tất cả được xây dựng trên nền tảng Multi-tenancy vững chắc với hệ thống Phân quyền RBAC chi tiết và Bảo mật 2FA cao cấp. Đây không chỉ là công cụ làm việc mà là hệ điều hành số giúp doanh nghiệp hoạt động hiệu quả như một khối thống nhất."
+        ],
+        "en": [
+          "This is a multi-ownership Enterprise Super App (SaaS), designed on Microservices architecture, aiming to optimize Smooth Operation, Transparent Control, and Time Saving for all types of businesses.",
+          "All built on a solid Multi-tenancy platform with detailed RBAC Authorization system and advanced 2FA Security. This is not just a working tool but a digital operating system that helps businesses operate effectively as a unified block."
+        ]
+      },
+      "image": "img/project/logo4.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#flutter", "color": "#FF0000" },
+        { "name": "#docker", "color": "#1572B6" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": {
+        "vi": "Đang nhận dự án mới",
+        "en": "Accepting new projects"
+      },
+      "description": {
+        "vi": [
+          ""
+        ],
+        "en": [
+          ""
+        ]
+      },
+      "image": "img/project/d.png",
+      "specialClass": "cyber-grid", 
+      "links": {
+      },
+      "tags": [
+        { "name": "#flutter", "color": "#FF0000" },
+        { "name": "#docker", "color": "#1572B6" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": {
         "vi": "THÀNH PHỐ: BUNBUN CITY",
         "en": "CITY: BUNBUN CITY"
       },
@@ -24,13 +156,13 @@
       "links": {
       },
       "tags": [
-        { "name": "#lua", "color": "#000080" },
+        { "name": "#lua", "color": "#FF0000" },
         { "name": "#heidiSQL", "color": "#2E8B57" },
         { "name": "#xampp", "color": "#FB7A24" }
       ]
     },
     {
-      "id": 2,
+      "id": 7,
       "title": {
         "vi": "THÀNH PHỐ: JURA CITY",
         "en": "CITY: JURA CITY"
@@ -50,13 +182,13 @@
       "links": {
       },
       "tags": [
-        { "name": "#lua", "color": "#000080" },
+        { "name": "#lua", "color": "#FF0000" },
         { "name": "#heidiSQL", "color": "#2E8B57" },
         { "name": "#xampp", "color": "#FB7A24" }
       ]
     },
     {
-      "id": 3,
+      "id": 8,
       "title": {
         "vi": "THÀNH PHỐ: RACCOON TOWN",
         "en": "CITY: RACCOON TOWN"
@@ -76,13 +208,13 @@
       "links": {
       },
       "tags": [
-        { "name": "#lua", "color": "#000080" },
+        { "name": "#lua", "color": "#FF0000" },
         { "name": "#heidiSQL", "color": "#2E8B57" },
         { "name": "#xampp", "color": "#FB7A24" }
       ]
     },
     {
-      "id": 4,
+      "id": 9,
       "title": {
         "vi": "THÀNH PHỐ: MEOW TOWN",
         "en": "CITY: MEOW TOWN"
@@ -102,13 +234,13 @@
       "links": {
       },
       "tags": [
-        { "name": "#lua", "color": "#000080" },
+        { "name": "#lua", "color": "#FF0000" },
         { "name": "#heidiSQL", "color": "#2E8B57" },
         { "name": "#xampp", "color": "#FB7A24" }
       ]
     },
     {
-      "id": 5,
+      "id": 10,
       "title": {
         "vi": "THÀNH PHỐ: CLOUD CITY",
         "en": "CITY: CLOUD CITY"
@@ -128,13 +260,13 @@
       "links": {
       },
       "tags": [
-        { "name": "#lua", "color": "#000080" },
+        { "name": "#lua", "color": "#FF0000" },
         { "name": "#heidiSQL", "color": "#2E8B57" },
         { "name": "#xampp", "color": "#FB7A24" }
       ]
     },
     {
-      "id": 6,
+      "id": 11,
       "title": {
         "vi": "THÀNH PHỐ: PANDA CITY",
         "en": "CITY: PANDA CITY"
@@ -154,13 +286,13 @@
       "links": {
       },
       "tags": [
-        { "name": "#lua", "color": "#000080" },
+        { "name": "#lua", "color": "#FF0000" },
         { "name": "#heidiSQL", "color": "#2E8B57" },
         { "name": "#xampp", "color": "#FB7A24" }
       ]
     },
     {
-      "id": 7,
+      "id": 12,
       "title": {
         "vi": "THÀNH PHỐ: PIUPOW TOWN",
         "en": "CITY: PIUPOW TOWN"
@@ -180,13 +312,13 @@
       "links": {
       },
       "tags": [
-        { "name": "#lua", "color": "#000080" },
+        { "name": "#lua", "color": "#FF0000" },
         { "name": "#heidiSQL", "color": "#2E8B57" },
         { "name": "#xampp", "color": "#FB7A24" }
       ]
     },
     {
-      "id": 8,
+      "id": 13,
       "title": {
         "vi": "THÀNH PHỐ: CHICKEN TOWN",
         "en": "CITY: CHICKEN TOWN"
@@ -206,13 +338,13 @@
       "links": {
       },
       "tags": [
-        { "name": "#lua", "color": "#000080" },
+        { "name": "#lua", "color": "#FF0000" },
         { "name": "#heidiSQL", "color": "#2E8B57" },
         { "name": "#xampp", "color": "#FB7A24" }
       ]
     },
     {
-      "id": 9,
+      "id": 14,
       "title": {
         "vi": "THÀNH PHỐ: HATE CITY RP",
         "en": "CITY: HATE CITY RP"
@@ -232,7 +364,7 @@
       "links": {
       },
       "tags": [
-        { "name": "#lua", "color": "#000080" },
+        { "name": "#lua", "color": "#FF0000" },
         { "name": "#heidiSQL", "color": "#2E8B57" },
         { "name": "#xampp", "color": "#FB7A24" }
       ]

@@ -199,15 +199,12 @@ if (canvas) {
 
     // --- QUAN TRỌNG: Đóng gói animation vào hàm ---
     const animateThree = () => {
-        requestAnimationFrame(animateThree); // Vòng lặp
+        requestAnimationFrame(animateThree); // Vòng lặp khung hình
 
-        // Animation hạt (Giữ nguyên tốc độ xoay)
-        particlesMesh.rotation.y += 0.0008;
-        particlesMesh.rotation.x += 0.0003;
-        
-        // Tương tác chuột nhẹ hơn
-        particlesMesh.rotation.y += 0.0008 + (mouseX * 0.00005);
-        particlesMesh.rotation.x += 0.0008 + (mouseY * 0.00005);
+        // CHỈ GIỮ LẠI PHẦN TỰ QUAY
+        // Số càng nhỏ quay càng chậm. Bạn có thể chỉnh 0.0005 thành 0.0002 nếu muốn chậm hơn nữa.
+        particlesMesh.rotation.y += 0.0005; 
+        particlesMesh.rotation.x += 0.0002;
 
         renderer.render(scene, camera);
     };

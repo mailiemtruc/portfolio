@@ -19,7 +19,6 @@
         { "name": "C", "type": "image", "src": "img/c-program-icon.png", "color": "#A8B9CC" },
         { "name": "C++", "type": "image", "src": "img/c-plus-plus-programming-language-icon.png", "color": "#00599C" },
         { "name": "C#", "type": "image", "src": "img/c-sharp-programming-language-icon.png", "color": "#9B4F96" },
-        { "name": "TypeScript", "type": "image", "src": "img/typescript-programming-language-icon.png", "color": "#3178C6" },
         { "name": "Lua", "type": "image", "src": "img/lua.png", "color": "#000080" }
       ]
     },
@@ -39,7 +38,8 @@
         { "name": "Three.js", "type": "image", "src": "img/three-js-icon.png", "color": "#ffffff", "imgClass": "white-icon" },
         { "name": "HTML", "type": "image", "src": "img/html-icon.png", "color": "#ff5e00" },
         { "name": "CSS", "type": "image", "src": "img/css-icon.png", "color": "#0077ff" },
-        { "name": "JS", "type": "image", "src": "img/javascript-programming-language-icon.png", "color": "#fbff00" }
+        { "name": "JS", "type": "image", "src": "img/javascript-programming-language-icon.png", "color": "#fbff00" },
+        { "name": "TypeScript", "type": "image", "src": "img/typescript-programming-language-icon.png", "color": "#3178C6" }
       ]
     },
     {
