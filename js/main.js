@@ -24,23 +24,21 @@ requestAnimationFrame(raf);
 
 // === [MỚI] KIỂM TRA THIẾT BỊ ===
 function isMobileOrTablet() {
-  const ua = navigator.userAgent || navigator.vendor || window.opera;
-
-  // iPhone / iPad / iPod
-  if (/iPhone|iPad|iPod/i.test(ua)) return true;
-
-  // Android
-  if (/android/i.test(ua)) return true;
-
-  // Generic mobile/tablet keywords
-  if (/Mobi|Tablet|Mobile|IEMobile|BlackBerry|Kindle|Silk|Opera Mini/i.test(ua)) return true;
-
-  // Touchscreen fallback (Safari hay lỗi userAgent)
-  if (window.matchMedia("(pointer: coarse)").matches) return true;
-
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  // Android, iOS, Windows Phone
+  if (/android|ipad|iphone|ipod|windows phone/i.test(userAgent)) {
+    return true;
+  }
+  // Các thiết bị Android/Tablet khác (có thể loại trừ desktop mode)
+  if (/Mobi|Tablet|Mobile|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk|PSP/i.test(userAgent)) {
+    return true;
+  }
+  // Dùng màn hình cảm ứng như một tiêu chí phụ (ít chính xác hơn)
+  if (window.matchMedia("(pointer: coarse)").matches) {
+    return true;
+  }
   return false;
 }
-
 
 // ======================================================
 // BIẾN TOÀN CỤC ĐỂ QUẢN LÝ ANIMATION (QUAN TRỌNG)
@@ -90,20 +88,15 @@ function finishPreloader() {
 
 // === [LOGIC MỚI] XỬ LÝ PRELOADER ===
 if (IS_MOBILE) {
-  // 1. TẮT VIDEO HOÀN TOÀN TRÊN MOBILE
+  // 1. TẮT VIDEO HOÀN TOÀN
   if (video) video.remove();
   
   // 2. Chạy thanh loading giả định (1.2 giây)
   let loadProgress = 0;
-  const loadingDuration = 1200; // 1.2 giây
-  const stepInterval = 120; // 10 bước
-  
   const loadInterval = setInterval(() => {
-    loadProgress += (stepInterval / loadingDuration) * 100; // Tăng dần 10% mỗi 120ms
-    const displayPercent = Math.min(100, Math.round(loadProgress));
-    
-    if (counter) counter.textContent = displayPercent + "%";
-    if (barFill) barFill.style.width = displayPercent + "%";
+    loadProgress += 10;
+    if (counter) counter.textContent = Math.min(100, loadProgress) + "%";
+    if (barFill) barFill.style.width = Math.min(100, loadProgress) + "%";
     
     if (loadProgress >= 100) {
       clearInterval(loadInterval);
@@ -112,7 +105,7 @@ if (IS_MOBILE) {
         finishPreloader();
       }, 100);
     }
-  }, stepInterval); 
+  }, 120); // 10 lần * 120ms = 1.2s (Bằng thời gian transition trong CSS)
   
   // Thêm class để CSS căn giữa
   if (preloader) preloader.classList.add('mobile-only');
@@ -120,22 +113,12 @@ if (IS_MOBILE) {
 } else {
   // LOGIC CŨ CHO PC/LAPTOP (CÓ VIDEO)
   if (video) {
-    // Thêm cờ để theo dõi nếu đã vào web chưa
-    let hasFinished = false; 
-    
     // Cố gắng phát video ngay
     const playPromise = video.play();
     if (playPromise !== undefined) {
       playPromise.catch(error => {
-        // Nếu Autoplay bị chặn: Bỏ video, gọi loading giả
-        if (hasFinished) return;
-        console.log("Autoplay bị chặn trên PC (thường do tab không active). Chuyển sang loading giả.");
-        // Chạy loading giả 1.2s
-        setTimeout(() => {
-             if (hasFinished) return;
-             hasFinished = true; 
-             finishPreloader();
-        }, 1200);
+        console.log("Autoplay bị chặn:", error);
+        finishPreloader(); // Nếu chặn thì vào web luôn
       });
     }
   
@@ -151,8 +134,6 @@ if (IS_MOBILE) {
   
     // Khi video hết -> Vào web
     video.addEventListener("ended", () => {
-      if (hasFinished) return;
-      hasFinished = true;
       if (counter) counter.textContent = "100%";
       if (barFill) barFill.style.width = "100%";
       
