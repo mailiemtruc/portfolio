@@ -239,32 +239,39 @@ let particleCount = 0;
 
 // Hàm tạo và thả hạt
 function createStarParticle(x, y) {
-    // Không cần dùng cursorGlow nữa, chỉ cần particleContainer
     if (!particleContainer || particleCount > 150) return; 
 
     const star = document.createElement('div');
     star.className = 'particle-star';
     
-    // Tạo vị trí ngẫu nhiên xung quanh con trỏ (phạm vi 20px)
+    // Ngẫu nhiên vị trí xung quanh chuột
     const offsetX = (Math.random() - 0.5) * 20; 
     const offsetY = (Math.random() - 0.5) * 20; 
+
+    // --- CHỈNH LỆCH TÂM (Giữ nguyên số bạn đã căn chỉnh trước đó) ---
+    const shiftX = 12; 
+    const shiftY = 12;
+
+    star.style.left = `${x + offsetX + shiftX}px`;
+    star.style.top = `${y + offsetY + shiftY}px`;
     
-    star.style.left = `${x + offsetX}px`;
-    star.style.top = `${y + offsetY}px`;
-    
-    // Kích thước ngẫu nhiên (1px đến 3px)
-    const size = Math.random() * 2 + 1; 
+    // --- LÀM ĐẸP: Kích thước ngẫu nhiên (Random) ---
+    // Hạt sẽ có kích thước từ 1px đến 3.5px -> Tạo độ sâu cho hiệu ứng
+    const size = Math.random() * 2.5 + 1; 
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
     
+    // Thêm chút ngẫu nhiên về độ trong suốt ban đầu để lung linh hơn
+    star.style.opacity = Math.random() * 0.5 + 0.5; // Từ 0.5 đến 1.0
+
     particleContainer.appendChild(star);
     particleCount++;
 
-    // Xóa hạt sau khi animation hoàn tất (0.8s) để giải phóng bộ nhớ DOM
+    // Xóa hạt sau 1s (khớp với thời gian animation bên CSS)
     setTimeout(() => {
         star.remove();
         particleCount--;
-    }, 1200); 
+    }, 1000); 
 }
 
 // Hàm chính quản lý hiệu ứng chuột (Không cần logic di chuyển mượt mà cho Glow nữa)

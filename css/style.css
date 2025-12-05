@@ -20,12 +20,35 @@
 /* --- Reset & Base --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* --- SỬA LẠI ĐOẠN CSS CON TRỎ CHUỘT (FINAL) --- */
+
+/* 1. Áp dụng cho toàn trang */
 body {
   background-color: var(--bg-dark);
   font-family: var(--font-body);
   color: var(--text-main);
   overflow-x: hidden;
   line-height: 1.6;
+  cursor: url('../img/chuot.png') 16 16, auto !important;
+}
+
+/* 2. Áp dụng cho TẤT CẢ các thành phần tương tác */
+a, 
+button, 
+.btn, 
+.project-card, 
+.tech-card, 
+.nav-links a, 
+.role-card, 
+.role-card img, 
+.timeline-content,
+/* --- THÊM MỚI CÁC DÒNG DƯỚI ĐÂY --- */
+input,          /* Ô nhập tên, email... */
+textarea,       /* Ô nhập tin nhắn dài */
+select,         /* Ô chọn danh sách (nếu có) */
+.form-group     /* Vùng bao quanh ô nhập */
+{
+  cursor: url('../img/chuot.png') 16 16, pointer !important;
 }
 
 /* --- Lenis Smooth Scroll (Bắt buộc) --- */
@@ -1521,7 +1544,7 @@ html {
   width: 100%;
   position: relative;
   background: transparent !important;
-  margin-top: -140px;
+  margin-top: -160px;
   /* Mẹo để model có thể lấn sang trái/phải một chút */
   margin-right: -50px; 
 }
@@ -1555,35 +1578,32 @@ html {
 /* Định nghĩa một hạt sao băng */
 .particle-star {
     position: absolute;
-    /* Tăng kích thước cơ bản của hạt (từ 2px lên 3px) */
-    width: 3px; 
-    height: 3px;
+    /* Dùng biến màu trắng */
     background: #ffffff; 
-    border-radius: 50%;
+    border-radius: 50%; /* Hình tròn mềm mại */
     
-    /* Tăng độ sáng (Glow) lên gấp đôi để nổi bật */
-    box-shadow: 0 0 6px 2px rgba(0, 64, 255, 1.0), 
-                0 0 15px rgba(255, 255, 255, 0.6);
+    /* TẠO ĐỘ SÁNG (GLOW) MẠNH MẼ */
+    /* Lớp 1: Sáng rực ngay tâm */
+    /* Lớp 2: Tỏa sáng mờ xung quanh */
+    box-shadow: 
+        0 0 4px 1px rgba(255, 255, 255, 0.9), 
+        0 0 10px 4px rgba(255, 255, 255, 0.3);
                 
     pointer-events: none;
     will-change: transform, opacity;
     
-    /* Kéo dài thời gian rơi (từ 0.8s lên 1.2s) */
-    animation: starFall 1.2s ease-out forwards; 
+    /* Animation mượt hơn */
+    animation: starFall 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 /* Keyframes cho hiệu ứng rơi và mờ */
 @keyframes starFall {
     0% {
         opacity: 1;
-        transform: translate(0, 0) scale(1.5); /* Bắt đầu to hơn */
-    }
-    50% {
-        opacity: 0.8;
-        transform: translate(0, 70px) scale(1); /* Rơi xuống 70px */
+        transform: translate(0, 0) scale(1.2); /* Bắt đầu hơi to */
     }
     100% {
-        opacity: 0;
-        transform: translate(0, 150px) scale(0.3); /* Rơi xa hơn (150px) và mờ đi */
+        opacity: 0; /* Mờ dần */
+        transform: translate(0, 50px) scale(0.2); /* Rơi xuống 50px và thu nhỏ lại */
     }
 }
