@@ -4,23 +4,30 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 // Giữ nguyên các code khởi tạo Lenis ở dưới...
 
 // ======================================================
-// 1. SMOOTH SCROLL (LENIS)
+// 1. SMOOTH SCROLL (LENIS) - FIX CRASH IOS
 // ======================================================
-const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    smooth: true,
-    mouseMultiplier: 0.8, // Giảm độ nhạy cuộn xuống một chút cho đầm tay
-    smoothTouch: false,   // Tắt smooth scroll trên cảm ứng (điện thoại tự cuộn mượt rồi)
-    touchMultiplier: 2,
-});
+let lenis = null;
+try {
+    if (typeof Lenis !== 'undefined') {
+        lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            smooth: true,
+            mouseMultiplier: 0.8,
+            smoothTouch: false, 
+            touchMultiplier: 2,
+        });
 
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    }
+} catch (e) {
+    console.warn("Lenis init skipped (Mobile safe):", e);
 }
-requestAnimationFrame(raf);
 
 // === [MỚI] KIỂM TRA THIẾT BỊ ===
 function isMobileOrTablet() {
@@ -47,108 +54,89 @@ function isMobileOrTablet() {
 let startBackgroundEffects = null; 
 
 // ======================================================
-// 2. PRELOADER SYSTEM (Đã tối ưu mượt mà)
+// 2. PRELOADER SYSTEM (Đã bọc an toàn trong hàm)
 // ======================================================
-const preloader = document.querySelector(".preloader");
-const counter = document.querySelector(".counter");
-const barFill = document.querySelector(".bar-fill");
-const video = document.getElementById("intro-video");
+// Chờ HTML tải xong 100% mới chạy code tìm thẻ -> Tránh lỗi null
+document.addEventListener("DOMContentLoaded", () => {
+    initPreloader();
+});
 
-const IS_MOBILE = isMobileOrTablet(); // Lấy trạng thái thiết bị
+function initPreloader() {
+    // 1. Khai báo biến BÊN TRONG hàm (An toàn nhất)
+    const preloader = document.querySelector(".preloader");
+    const counter = document.querySelector(".counter");
+    const barFill = document.querySelector(".bar-fill");
+    const video = document.getElementById("intro-video");
 
-function finishPreloader() {
-  // 1. Dừng video ngay lập tức để giải phóng GPU
-  if (video) video.pause();
-  
-  // 2. Ẩn preloader (Class .hide trong CSS sẽ làm mờ nó)
-  if (preloader) preloader.classList.add("hide");
+    const IS_MOBILE = isMobileOrTablet(); 
 
-  // 3. Hiện nội dung web (Class .active trong CSS sẽ làm rõ nét và zoom out)
-  requestAnimationFrame(() => {
-    document.querySelectorAll(".reveal-content").forEach(el => el.classList.add("active"));
-  });
+    // Hàm kết thúc loading
+    function finishPreloader() {
+        if (video) video.pause();
+        if (preloader) preloader.classList.add("hide");
 
-  // 4. KÍCH HOẠT CÁC HIỆU ỨNG NẶNG SAU KHI CHUYỂN CẢNH
-  // Delay 0.8s: Đợi hiệu ứng mờ màn hình chạy gần xong mới bật 3D lên
-  setTimeout(() => {
-    
-    // === [ĐÃ SỬA] KÍCH HOẠT 3D NỀN CHO MỌI THIẾT BỊ ===
-    // Lúc này video đã tắt, GPU rảnh tay để chạy 3D
-    if (typeof startBackgroundEffects === 'function') startBackgroundEffects();
-    
-    // Chạy Scroll Reveal (Cuộn tới đâu hiện tới đó)
-    if (typeof initScrollReveal === 'function') initScrollReveal();
-    
-    // Khởi động hiệu ứng chuột (CHỈ BẬT CURSOR GLOW CHO PC)
-    if (!IS_MOBILE) followCursor(); 
-    
-    // ==================================================
-  }, 800); 
-}
+        requestAnimationFrame(() => {
+            document.querySelectorAll(".reveal-content").forEach(el => el.classList.add("active"));
+        });
 
-// === [LOGIC MỚI] XỬ LÝ PRELOADER ===
-if (IS_MOBILE) {
-  // 1. TẮT VIDEO HOÀN TOÀN
-  if (video) video.remove();
-  
-  // 2. Chạy thanh loading giả định (1.2 giây)
-  let loadProgress = 0;
-  const loadInterval = setInterval(() => {
-    loadProgress += 10;
-    if (counter) counter.textContent = Math.min(100, loadProgress) + "%";
-    if (barFill) barFill.style.width = Math.min(100, loadProgress) + "%";
-    
-    if (loadProgress >= 100) {
-      clearInterval(loadInterval);
-      // Delay cực ngắn 100ms rồi chuyển cảnh luôn cho mượt
-      setTimeout(() => {
-        finishPreloader();
-      }, 100);
+        setTimeout(() => {
+            if (typeof startBackgroundEffects === 'function') startBackgroundEffects();
+            if (typeof initScrollReveal === 'function') initScrollReveal();
+            if (!IS_MOBILE) followCursor(); 
+        }, 800); 
     }
-  }, 120); // 10 lần * 120ms = 1.2s (Bằng thời gian transition trong CSS)
-  
-  // Thêm class để CSS căn giữa
-  if (preloader) preloader.classList.add('mobile-only');
 
-} else {
-  // LOGIC CŨ CHO PC/LAPTOP (CÓ VIDEO)
-  if (video) {
-    // Cố gắng phát video ngay
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(error => {
-        console.log("Autoplay bị chặn:", error);
-        finishPreloader(); // Nếu chặn thì vào web luôn
-      });
+    // === LOGIC XỬ LÝ (CHẠY TRONG HÀM) ===
+    if (IS_MOBILE) {
+        // --- MOBILE: ẨN VIDEO & CHẠY GIẢ LẬP ---
+        if (video) {
+            video.style.display = 'none'; // Chỉ ẩn, không xóa
+            video.pause();
+        }
+        
+        if (preloader) preloader.classList.add('mobile-only');
+
+        // Luôn chạy loading giả định để đảm bảo vào được web
+        let loadProgress = 0;
+        const loadInterval = setInterval(() => {
+            loadProgress += 5; // Tốc độ load
+            
+            // Kiểm tra biến tồn tại trước khi gán
+            if (counter) counter.textContent = Math.min(100, loadProgress) + "%";
+            if (barFill) barFill.style.width = Math.min(100, loadProgress) + "%";
+            
+            if (loadProgress >= 100) {
+                clearInterval(loadInterval);
+                setTimeout(finishPreloader, 200);
+            }
+        }, 60); 
+
+    } else {
+        // --- PC: CÓ VIDEO ---
+        if (video) {
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => finishPreloader()); // Nếu lỗi play, vào web luôn
+            }
+        
+            video.addEventListener("timeupdate", () => {
+                if (video.duration) {
+                    const percent = Math.round((video.currentTime / video.duration) * 100);
+                    if (counter) counter.textContent = percent + "%";
+                    if (barFill) barFill.style.width = percent + "%";
+                }
+            });
+        
+            video.addEventListener("ended", () => {
+                if (counter) counter.textContent = "100%";
+                if (barFill) barFill.style.width = "100%";
+                setTimeout(finishPreloader, 100);
+            });
+        } else {
+            finishPreloader();
+        }
     }
-  
-    // Cập nhật phần trăm theo video
-    video.addEventListener("timeupdate", () => {
-      if (video.duration) {
-        const percent = (video.currentTime / video.duration) * 100;
-        const displayPercent = Math.round(percent);
-        if (counter) counter.textContent = displayPercent + "%";
-        if (barFill) barFill.style.width = displayPercent + "%";
-      }
-    });
-  
-    // Khi video hết -> Vào web
-    video.addEventListener("ended", () => {
-      if (counter) counter.textContent = "100%";
-      if (barFill) barFill.style.width = "100%";
-      
-      // Delay cực ngắn 100ms rồi chuyển cảnh luôn cho mượt
-      setTimeout(() => {
-        finishPreloader();
-      }, 100);
-    });
-  
-  } else {
-    // Dự phòng nếu không tìm thấy video
-    finishPreloader();
-  }
 }
-
 // ======================================================
 // 3. THREE.JS BACKGROUND (ĐÃ SỬA: RÕ HƠN, SÁNG HƠN, NHIỀU HẠT HƠN)
 // ======================================================
