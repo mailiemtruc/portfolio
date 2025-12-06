@@ -118,11 +118,21 @@ function initPreloader() {
     } else {
         // --- PC: CÓ VIDEO ---
         if (video) {
-            const playPromise = video.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(() => finishPreloader()); // Nếu lỗi play, vào web luôn
-            }
-        
+            // [SỬA LẠI]: Thêm sự kiện canplaythrough
+            // Sự kiện này đảm bảo video đã tải đủ để chạy mượt mà không bị dừng để buffer
+            video.addEventListener('canplaythrough', () => {
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => finishPreloader());
+                }
+            }, { once: true }); // Chỉ chạy 1 lần
+
+            // Fallback: Nếu mạng quá lag sau 5 giây video chưa tải xong thì bỏ qua luôn
+            setTimeout(() => {
+                if(video.paused) finishPreloader();
+            }, 5000);
+
+            // Giữ nguyên logic cập nhật %
             video.addEventListener("timeupdate", () => {
                 if (video.duration) {
                     const percent = Math.round((video.currentTime / video.duration) * 100);
@@ -130,12 +140,15 @@ function initPreloader() {
                     if (barFill) barFill.style.width = percent + "%";
                 }
             });
-        
+
             video.addEventListener("ended", () => {
                 if (counter) counter.textContent = "100%";
                 if (barFill) barFill.style.width = "100%";
                 setTimeout(finishPreloader, 100);
             });
+            
+            // Kích hoạt load video thủ công nếu trình duyệt lười
+            video.load(); 
         } else {
             finishPreloader();
         }
