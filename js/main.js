@@ -557,6 +557,10 @@ function renderHero(lang) {
           <div class="social-links">
             <a href="${info.social.github}" target="_blank"><i class="ri-github-fill"></i></a>
             <a href="${info.social.facebook}" target="_blank"><i class="ri-facebook-fill"></i></a>
+            
+            ${info.social.instagram ? `<a href="${info.social.instagram}" target="_blank"><i class="ri-instagram-fill"></i></a>` : ''}
+            ${info.social.tiktok ? `<a href="${info.social.tiktok}" target="_blank"><i class="ri-tiktok-fill"></i></a>` : ''}
+            ${info.social.youtube ? `<a href="${info.social.youtube}" target="_blank"><i class="ri-youtube-fill"></i></a>` : ''}
           </div>
         </div>
         
