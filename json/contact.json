@@ -1,0 +1,24 @@
+{
+  "title": {
+    "vi": "Liên hệ",
+    "en": "Contact"
+  },
+  "form": {
+    "namePlaceholder": {
+      "vi": "Tên của bạn",
+      "en": "Your Name"
+    },
+    "emailPlaceholder": {
+      "vi": "Email liên hệ",
+      "en": "Contact Email"
+    },
+    "messagePlaceholder": {
+      "vi": "Nội dung tin nhắn...",
+      "en": "Your Message..."
+    },
+    "button": {
+      "vi": "Gửi tin nhắn",
+      "en": "Send Message"
+    }
+  }
+}

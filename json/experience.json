@@ -1,0 +1,100 @@
+{
+  "info": {
+    "title": { "vi": "Kinh nghiệm làm việc", "en": "Work Experience" }
+  },
+  "list": [
+    {
+      "id": 1,
+      "period": "2020 - 2022",
+      "role": {
+        "vi": "CHANNA LEE QUY NHƠN",
+        "en": "CHANNA LEE QUY NHƠN"
+      },
+      "company": "Open an aquarium shop",
+      "icon": "ri-tools-fill",
+      "color": "#FFD43B",
+      "description": {
+        "vi": [
+          "Hợp tác với các trại lửa tại Indonesia, Malaysia và các ấn phẩm để nhập khẩu cá cảnh về bán.",
+          "Hợp tác với bạn bè tại TP.HCM, Hà Nội, Đà Nẵng để xây dựng chuỗi cửa hàng cá cảnh CHANNA LEE."
+        ],
+        "en": [
+          "Cooperate with fire camps in Indonesia, Malaysia and publications to import fish for sale.",
+          "Collaborate with friends in Ho Chi Minh, Hanoi, Da Nang to make a chain of aquarium stores CHANNA LEE."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "period": "2023 - Present",
+      "role": {
+        "vi": "Học tại Trường Đại học Giao thông Vận tải Thành phố Hồ Chí Minh",
+        "en": "Studying at Ho Chi Minh City University of Transport"
+      },
+      "company": "Information technology students",
+      "icon": "ri-code-s-slash-line",
+      "color": "#61DAFB",
+      "description": {
+        "vi": [
+          "Chuyên ngành: Kỹ sư Phần mềm – Định hướng Phát triển Web và Ứng dụng Di động.",
+          "Có tinh thần tự học, chủ động nhận các dự án nhỏ để tích lũy kinh nghiệm thực tế.",
+          "Nâng cao tư duy UI/UX thông qua quá trình tự học và thực hành liên tục.",
+          "Chủ động học thêm các công cụ hỗ trợ như Photoshop, Illustrator, Blender,… để phục vụ cho thiết kế và phát triển sản phẩm."
+          
+        ],
+        "en": [
+          "Major: Software Engineering – Focused on Web and Mobile Application Development.",
+          "Self-motivated learner, actively taking on small projects to gain real-world experience.",
+          "Continuously improving UI/UX thinking through self-study and hands-on practice.",
+          "Proactively learning supporting tools such as Photoshop, Illustrator, Blender, and more to enhance design and product development skills."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "period": "08/2023 - Present",
+      "role": {
+        "vi": "DS TEAM",
+        "en": "DS TEAM"
+      },
+      "company": "Fivem programmer",
+      "icon": "ri-pen-nib-fill",
+      "color": "#F24E1E",
+      "description": {
+        "vi": [
+          "Chuyên thiết kế giao diện người dùng (UI) cho game.",
+          "Phát triển các tính năng mới, bao gồm nghề nghiệp, hệ thống và hoạt động trong game.",
+          "Khắc phục và sửa lỗi nhằm đảm bảo hệ thống hoạt động ổn định."
+        ],
+        "en": [
+          "Specialized in designing user interfaces (UI) for games.",
+          "Developed new features, including jobs, systems, and in-game activities",
+          "Performed bug fixing to ensure system stability and smooth operation."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "period": "08/2023 - Present",
+      "role": {
+        "vi": "OW STORE",
+        "en": "OW STORE"
+      },
+      "company": "Open a technology store",
+      "icon": "ri-brush-fill",
+      "color": "#9B5DE5",
+      "description": {
+        "vi": [
+          "Chuyên thiết kế các mô hình 3D (dây chuyền, đồng hồ, nhẫn,…) phục vụ cho game.",
+          "Thiết kế logo, banner, poster và các ấn phẩm đồ họa.",
+          "Phát triển bot tự động và các công cụ hỗ trợ vận hành."
+        ],
+        "en": [
+          "Specialized in creating 3D models (necklaces, watches, rings, etc.) for in-game assets.",
+          "Experienced in designing logos, banners, posters, and various graphic materials.",
+          "Developed automation bots and operational support tools."
+        ]
+      }
+    }
+  ]
+}
